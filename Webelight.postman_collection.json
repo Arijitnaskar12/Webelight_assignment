@@ -1,0 +1,257 @@
+{
+	"info": {
+		"_postman_id": "6ece1143-a9dd-460f-9d52-7ff80cfd4f4d",
+		"name": "Webelight",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27730277"
+	},
+	"item": [
+		{
+			"name": "http://localhost:5000/user/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"Avinash\",\r\n    \"password\":\"Avinash@0000\",\r\n    \"role\":\"user\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/user/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/user/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"Avinash\",\r\n    \"password\":\"Avinash@0000\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/user/allcustomers",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFyaWppdCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcwODYxMjI0MSwiZXhwIjoxNzA4NjE5NDQxfQ.ukw1IfSlwCTtk1SCIDAax7T4Wb-Ix-abpVa5iemwUdk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"Arijit\",\r\n    \"password\":\"Arijit12\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/user/allcustomers?page=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"user",
+						"allcustomers"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/products/allProducts?page=1",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFyaWppdCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcwODYxMjM5NCwiZXhwIjoxNzA4NjE5NTk0fQ.KBElwLZbKqjkgk4MBa8WcHWCWZPtH-R2ARxXxoinWFU",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/products/allProducts?page=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"products",
+						"allProducts"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/products/addProduct",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFyaWppdCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcwODYxMjM5NCwiZXhwIjoxNzA4NjE5NTk0fQ.KBElwLZbKqjkgk4MBa8WcHWCWZPtH-R2ARxXxoinWFU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/products/deleteProduct/65d75efbbee5f679026911d6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"products",
+						"deleteProduct",
+						"65d75efbbee5f679026911d6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/products/updateProduct",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFyaWppdCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcwODYxMjM5NCwiZXhwIjoxNzA4NjE5NTk0fQ.KBElwLZbKqjkgk4MBa8WcHWCWZPtH-R2ARxXxoinWFU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"_id\":\"65d76150bee5f679026911de\",\r\n    \"name\": \"Xtreme X12\",\r\n    \"category\": \"Watch\",\r\n    \"price\": 7000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/products/updateProduct",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"products",
+						"updateProduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/products/filter?category=Mobile&minprice=18000&maxprice=200000&name=Realme 3 Pro&page=1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/products/filter?category=Mobile&minprice=18000&maxprice=200000&name=Realme 3 Pro&page=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"products",
+						"filter"
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": "Mobile"
+						},
+						{
+							"key": "minprice",
+							"value": "18000"
+						},
+						{
+							"key": "maxprice",
+							"value": "200000"
+						},
+						{
+							"key": "name",
+							"value": "Realme 3 Pro"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

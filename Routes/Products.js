@@ -1,0 +1,10 @@
+const express=require('express');
+const { isAuth } = require('../Middlewares/isAuth');
+const { productFetching, addingProduct, updateProduct, deleteProduct, filteration } = require('../Controllers/products.controllers');
+const app=express();
+app.get('/allProducts',isAuth,productFetching);
+app.post('/addProduct',isAuth,addingProduct);
+app.put('/updateProduct',isAuth,updateProduct);
+app.delete('/deleteProduct/:id',isAuth,deleteProduct);
+app.get('/filter',filteration);
+module.exports=app;

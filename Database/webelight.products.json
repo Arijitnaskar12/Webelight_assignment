@@ -1,0 +1,99 @@
+[{
+  "_id": {
+    "$oid": "65d710c6eef6543b6a6d1515"
+  },
+  "name": "Iphone 15 Pro max",
+  "category": "Mobile",
+  "price": 200000,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65d71faaeef6543b6a6d151b"
+  },
+  "name": "Realme 3 Pro",
+  "category": "Mobile",
+  "price": 18000,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65d71fc7eef6543b6a6d151d"
+  },
+  "name": "Mac Book",
+  "category": "Laptop",
+  "price": 200000,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65d71fd5eef6543b6a6d151f"
+  },
+  "name": "Lenevo",
+  "category": "Laptop",
+  "price": 40000,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65d71ff7eef6543b6a6d1521"
+  },
+  "name": "Firebolt Ninja 2",
+  "category": "Watch",
+  "price": 3500,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65d72067a8e30073bd084ec7"
+  },
+  "name": "Apple A7",
+  "category": "Watch",
+  "price": 30000,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65d7207ca8e30073bd084ec9"
+  },
+  "name": "Apple airpods v4",
+  "category": "Airpods",
+  "price": 35000,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65d720aba8e30073bd084ecb"
+  },
+  "name": "Vivo airpods n3",
+  "category": "Airpods",
+  "price": 5000,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65d720daa8e30073bd084ecd"
+  },
+  "name": "Realme neckbands Vs25S",
+  "category": "Neckbands",
+  "price": 2000,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65d720f6a8e30073bd084ecf"
+  },
+  "name": "Samsung VY25S",
+  "category": "Neckbands",
+  "price": 3000,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65d76150bee5f679026911de"
+  },
+  "name": "Xtreme X12",
+  "category": "Watch",
+  "price": 7000,
+  "__v": 0
+}]
