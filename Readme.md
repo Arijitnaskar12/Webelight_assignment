@@ -15,7 +15,7 @@ The FMGC (Fast-Moving Consumer Goods) Commercial App is a RESTful API designed f
 
 ### 1. Register User
 
-- **Endpoint:** `/register`
+- **Endpoint:** `/user/register`
 - **Method:** POST
 - **Description:** Registers a new user.
 - **Request Body:**
@@ -25,7 +25,7 @@ The FMGC (Fast-Moving Consumer Goods) Commercial App is a RESTful API designed f
 
 ### 2. Login User
 
-- **Endpoint:** `/login`
+- **Endpoint:** `/user/login`
 - **Method:** POST
 - **Description:** Logs in a user and generates a JWT token.
 - **Request Body:**
@@ -34,7 +34,7 @@ The FMGC (Fast-Moving Consumer Goods) Commercial App is a RESTful API designed f
 
 ### 3. Get All Customers
 
-- **Endpoint:** `/allcustomers`
+- **Endpoint:** `/user/allcustomers`
 - **Method:** GET
 - **Description:** Retrieves customers data with pagination.
 - **Authorization:** Required (admin token)
@@ -44,7 +44,7 @@ The FMGC (Fast-Moving Consumer Goods) Commercial App is a RESTful API designed f
 
 ### 4. Get All Products
 
-- **Endpoint:** `/allproducts`
+- **Endpoint:** `/products/allproducts`
 - **Method:** GET
 - **Description:** Retrieves all products data with pagination.
 - **Query Parameters:**
@@ -54,7 +54,7 @@ The FMGC (Fast-Moving Consumer Goods) Commercial App is a RESTful API designed f
 
 ### 5. Add Product
 
-- **Endpoint:** `/addProduct`
+- **Endpoint:** `/products/addProduct`
 - **Method:** POST
 - **Description:** Adds a new product to the database.
 - **Authorization:** Required (admin token)
@@ -65,7 +65,7 @@ The FMGC (Fast-Moving Consumer Goods) Commercial App is a RESTful API designed f
 
 ### 6. Update Product
 
-- **Endpoint:** `/updateProduct`
+- **Endpoint:** `/products/updateProduct`
 - **Method:** PUT
 - **Description:** Updates an existing product in the database.
 - **Authorization:** Required (admin token)
@@ -75,7 +75,7 @@ The FMGC (Fast-Moving Consumer Goods) Commercial App is a RESTful API designed f
 
 ### 7. Delete Product
 
-- **Endpoint:** `/deleteProduct/:id`
+- **Endpoint:** `/products/deleteProduct/:id`
 - **Method:** DELETE
 - **Description:** Deletes a product from the database.
 - **Authorization:** Required (admin token)
@@ -84,7 +84,7 @@ The FMGC (Fast-Moving Consumer Goods) Commercial App is a RESTful API designed f
 
 ### 8. Filter Products
 
-- **Endpoint:** `/filter`
+- **Endpoint:** `/products/filter`
 - **Method:** GET
 - **Description:** Filters products based on category, price, name, and pagination.
 - **Authorization:** Not required
@@ -105,12 +105,11 @@ The FMGC (Fast-Moving Consumer Goods) Commercial App is a RESTful API designed f
 
 ## Pagination
 
-- Pagination is implemented for endpoints `/allcustomers`, `/allProducts`, and `/filter`.
+- Pagination is implemented for endpoints `/user/allcustomers`, `/products/allproducts`, and `/products/filter`.
 - Default limit is set to 5 items per page.
 
 ## Installation
 
-1. Clone the repository:
-https://github.com/Arijitnaskar12/Webelight_assignment.git
-2.install Node Modules
-3.Run the Server
+1. Clone the repository: [FMGC Commercial App](https://github.com/Arijitnaskar12/Webelight_assignment.git)
+2. Install Node Modules
+3. Run the Server
