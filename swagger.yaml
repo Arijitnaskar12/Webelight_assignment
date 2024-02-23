@@ -1,0 +1,179 @@
+swagger: "2.0"
+info:
+  version: "1.0.0"
+  title: "FMGC Commercial App"
+paths:
+  /user/register:
+    post:
+      summary: "Register User"
+      description: "Registers a new user."
+      parameters:
+        - name: "body"
+          in: "body"
+          description: "User object that needs to be registered."
+          required: true
+          schema:
+            $ref: "#/definitions/User"
+      responses:
+        200:
+          description: "Successful operation"
+  /user/login:
+    post:
+      summary: "Login User"
+      description: "Logs in a user and generates a JWT token."
+      parameters:
+        - name: "body"
+          in: "body"
+          description: "User credentials for login."
+          required: true
+          schema:
+            $ref: "#/definitions/Login"
+      responses:
+        200:
+          description: "Successful operation"
+  /user/allcustomers:
+    get:
+      summary: "Get All Customers"
+      description: "Retrieves customers data with pagination."
+      parameters:
+        - name: "page"
+          in: "query"
+          description: "Page number for pagination."
+          required: true
+          type: "integer"
+      security:
+        - bearerAuth: []
+      responses:
+        200:
+          description: "Successful operation"
+  /products/allProducts:
+    get:
+      summary: "Get All Products"
+      description: "Retrieves all products data with pagination."
+      parameters:
+        - name: "page"
+          in: "query"
+          description: "Page number for pagination."
+          required: true
+          type: "integer"
+      security:
+        - bearerAuth: []
+      responses:
+        200:
+          description: "Successful operation"
+  /products/filter:
+    get:
+      summary: "Filter Products"
+      description: "Filters products based on category, price, name, and pagination."
+      parameters:
+        - name: "category"
+          in: "query"
+          description: "Category name to filter products."
+          type: "string"
+        - name: "minprice"
+          in: "query"
+          description: "Minimum price to filter products."
+          type: "number"
+        - name: "maxprice"
+          in: "query"
+          description: "Maximum price to filter products."
+          type: "number"
+        - name: "name"
+          in: "query"
+          description: "Product name to filter products."
+          type: "string"
+        - name: "page"
+          in: "query"
+          description: "Page number for pagination."
+          required: true
+          type: "integer"
+      security:
+        - bearerAuth: []
+      responses:
+        200:
+          description: "Successful operation"
+  /products/addProduct:
+    post:
+      summary: "Add Product"
+      description: "Adds a new product to the database."
+      parameters:
+        - name: "body"
+          in: "body"
+          description: "Product object to add."
+          required: true
+          schema:
+            $ref: "#/definitions/Product"
+      security:
+        - bearerAuth: []
+      responses:
+        200:
+          description: "Successful operation"
+  /products/updateProduct:
+    put:
+      summary: "Update Product"
+      description: "Updates an existing product in the database."
+      parameters:
+        - name: "body"
+          in: "body"
+          description: "Product object with updated fields."
+          required: true
+          schema:
+            $ref: "#/definitions/ProductUpdate"
+      security:
+        - bearerAuth: []
+      responses:
+        200:
+          description: "Successful operation"
+  /products/deleteProduct/{id}:
+    delete:
+      summary: "Delete Product"
+      description: "Deletes a product from the database."
+      parameters:
+        - name: "id"
+          in: "path"
+          description: "ID of the product to delete."
+          required: true
+          type: "string"
+      security:
+        - bearerAuth: []
+      responses:
+        200:
+          description: "Successful operation"
+definitions:
+  User:
+    type: "object"
+    properties:
+      username:
+        type: "string"
+      password:
+        type: "string"
+      role:
+        type: "string"
+  Login:
+    type: "object"
+    properties:
+      username:
+        type: "string"
+      password:
+        type: "string"
+  Product:
+    type: "object"
+    properties:
+      name:
+        type: "string"
+      category:
+        type: "string"
+      price:
+        type: "number"
+  ProductUpdate:
+    type: "object"
+    properties:
+      _id:
+        type: "string"
+      updated:
+        $ref: "#/definitions/Product"
+securityDefinitions:
+  bearerAuth:
+    type: "apiKey"
+    name: "Authorization"
+    in: "header"
